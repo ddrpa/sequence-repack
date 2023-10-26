@@ -1,8 +1,22 @@
 # README
 
-Sequence 是一个雪花 ID 生成包，使用 `new Sequence()` 创建一个实例后，可以不断通过 `Sequence.nextId()` 获取 ID。
+Sequence 是一个雪花 ID 生成包，创建 `cc.ddrpa.repack.sequence.Sequence` 实例后，可通过 `cc.ddrpa.repack.sequence.Sequence::nextId` 方法获取雪花 ID。
 
-代码逻辑从 MyBatis-Plus 的 `com.baomidou.mybatisplus.core.incrementer.DefaultIdentifierGenerator` 中提取，原始代码来自 [yu120/sequence](https://gitee.com/yu120/sequence)，本项目仅做打包和发布到中央仓库操作。
+代码从 MyBatis-Plus 的 `com.baomidou.mybatisplus.core.incrementer.DefaultIdentifierGenerator` 中提取，
+原始构思来自 [yu120/sequence](https://gitee.com/yu120/sequence)（MIT 许可），本项目仅做打包操作并发布到中央仓库。
+
+本项目制品通过 sonatype.org 同步到 Maven 中央仓库，
+可访问 [Sonatype Maven Central Repository](https://central.sonatype.com/artifact/cc.ddrpa.repack/sequence) 或
+[MvnRepository](https://mvnrepository.com/artifact/cc.ddrpa.repack/sequence) 获取。
+由于本人并非代码作者，不会对版本进行更新。
+
+```xml
+<dependency>
+    <groupId>cc.ddrpa.repack</groupId>
+    <artifactId>sequence</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 
 ### 在 JPA & Hibernate 以及其他场合中使用
 

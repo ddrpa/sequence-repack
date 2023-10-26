@@ -17,10 +17,18 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <name>yufan(package issues only)</name>
+            <email>yufan@live.com</email>
+            <organization>yufanonsoftware.me</organization>
+            <organizationUrl>https://yufanonsoftware.me</organizationUrl>
+        </developer>
+    </developers>
     <scm>
         <connection>scm:git:git://github.com/ddrpa/sequence-repack.git</connection>
         <developerConnection>scm:git:ssh://github.com:ddrpa/sequence-repack.git</developerConnection>
-        <url>http://github.com/ddrpa/sequence-repack/tree/master</url>
+        <url>https://github.com/ddrpa/sequence-repack/tree/master</url>
     </scm>
 
     <distributionManagement>
@@ -66,6 +74,19 @@
                         <phase>verify</phase>
                         <goals>
                             <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
